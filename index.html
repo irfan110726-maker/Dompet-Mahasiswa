@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dompet Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>💰 Dompet Mahasiswa</h1>
+            <p>Kelola keuanganmu dengan lebih mudah</p>
+        </header>
+
+        <section class="summary">
+            <div class="card balance">
+                <h3>Saldo Saat Ini</h3>
+                <h2 id="balance">Rp0</h2>
+            </div>
+
+            <div class="card income">
+                <h3>Total Pemasukan</h3>
+                <h2 id="incomeTotal">Rp0</h2>
+            </div>
+
+            <div class="card expense">
+                <h3>Total Pengeluaran</h3>
+                <h2 id="expenseTotal">Rp0</h2>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Tambah Transaksi</h2>
+
+            <form id="transactionForm">
+
+                <label>Nama Transaksi</label>
+                <input type="text" id="title"
+                    placeholder="Contoh: Uang makan" required>
+
+                <label>Jumlah Uang (Rp)</label>
+                <input type="number" id="amount"
+                    placeholder="Masukkan jumlah uang"
+                    min="1" required>
+
+                <label>Jenis Transaksi</label>
+                <select id="type">
+                    <option value="income">Pemasukan</option>
+                    <option value="expense">Pengeluaran</option>
+                </select>
+
+                <label>Kategori</label>
+                <select id="category">
+                    <option>Makan & Minum</option>
+                    <option>Transportasi</option>
+                    <option>Kuota Internet</option>
+                    <option>Fotokopi & ATK</option>
+                    <option>Uang Saku</option>
+                    <option>Beasiswa</option>
+                    <option>Lainnya</option>
+                </select>
+
+                <label>Tanggal</label>
+                <input type="date" id="date" required>
+
+                <button type="submit">+ Simpan Transaksi</button>
+
+            </form>
+        </section>
+
+        <section class="history-section">
+            <h2>Riwayat Transaksi</h2>
+
+            <input type="text" id="search"
+                placeholder="Cari transaksi...">
+
+            <div id="transactionList"></div>
+
+            <p id="emptyState">Belum ada transaksi.</p>
+
+            <button id="exportBtn" class="export-btn">
+                Download Laporan CSV
+            </button>
+
+            <button id="clearBtn" class="clear-btn">
+                Hapus Semua Data
+            </button>
+        </section>
+
+        <footer>
+            <p>© 2026 Dompet Mahasiswa | Bijak Mengelola Uang</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
