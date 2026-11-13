@@ -1,0 +1,234 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f4f3;
+    color: #263b35;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+header {
+    background: linear-gradient(135deg, #126b55, #28a17b);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 14px;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.card {
+    padding: 22px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 12px #0000000d;
+}
+
+.card h3 {
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.card h2 {
+    font-size: 21px;
+    overflow-wrap: anywhere;
+}
+
+.balance {
+    border-left: 5px solid #218d6b;
+}
+
+.income {
+    border-left: 5px solid #299e64;
+}
+
+.expense {
+    border-left: 5px solid #e36c52;
+}
+
+.form-section,
+.history-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px #0000000d;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+input,
+select {
+    padding: 12px;
+    border: 1px solid #dce5e0;
+    border-radius: 7px;
+    font-family: inherit;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #218d6b;
+}
+
+button {
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    background: #218d6b;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #146b51;
+    transform: translateY(-2px);
+}
+
+#search {
+    margin-bottom: 15px;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 5px;
+    border-bottom: 1px solid #e8eeeb;
+}
+
+.transaction-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.transaction-info strong {
+    display: block;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.transaction-info small {
+    color: #89958f;
+    font-size: 11px;
+}
+
+.transaction .money {
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.positive {
+    color: #23945e;
+}
+
+.negative {
+    color: #dc654c;
+}
+
+.delete-btn {
+    background: #dc654c;
+    padding: 7px 10px;
+    font-size: 11px;
+}
+
+.delete-btn:hover {
+    background: #b94332;
+}
+
+.export-btn {
+    background: #286eaa;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.clear-btn {
+    background: #d9534f;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#emptyState {
+    text-align: center;
+    color: #929e98;
+    padding: 20px;
+    font-size: 13px;
+}
+
+footer {
+    text-align: center;
+    color: #89958f;
+    font-size: 12px;
+    padding: 20px;
+}
+
+@media (max-width: 650px) {
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .container {
+        width: 94%;
+        margin: 15px auto;
+    }
+
+    .form-section,
+    .history-section {
+        padding: 18px;
+    }
+
+    .transaction {
+        flex-wrap: wrap;
+    }
+}
